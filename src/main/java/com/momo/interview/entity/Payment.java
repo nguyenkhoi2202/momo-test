@@ -1,5 +1,6 @@
 package com.momo.interview.entity;
 
+import com.momo.interview.enums.StatePaymentEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -30,4 +31,11 @@ public class Payment {
 
   @ManyToOne
   private Bill bill;
+
+  public Payment(BigDecimal amount, LocalDate now, StatePaymentEnum statePaymentEnum, Bill bill) {
+    this.amount = amount;
+    this.paymentDate = now;
+    this.state = statePaymentEnum.name();
+    this.bill = bill;
+  }
 }

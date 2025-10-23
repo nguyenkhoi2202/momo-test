@@ -25,4 +25,12 @@ public class Users {
 
   private BigDecimal balance = BigDecimal.ZERO;
 
+  public void addBalance(BigDecimal amount) {
+    this.balance = this.balance.add(amount);
+  }
+
+  public void subtractFund(BigDecimal amount) {
+    this.balance = this.balance.subtract(amount);
+  }
+
 }

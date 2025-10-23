@@ -4,6 +4,8 @@ import com.momo.interview.entity.Users;
 import java.math.BigDecimal;
 
 public interface UserService {
-  Users getCustomer();
+  Users getUser();
   void cashIn(BigDecimal amount);
+
+  void goodBye();
 }
